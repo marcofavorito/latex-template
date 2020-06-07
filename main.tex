@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{times}
+\usepackage{soul}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[small]{caption}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{thm-restate}
+\usepackage{todonotes}
+\usepackage{xspace}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{amsmath}
+\usepackage{nameref}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows}
+\tikzset{->,
+    >=stealth,
+    node distance=3cm,
+    every state/.style={thick, fill=gray!10}
+}
+
+% See https://www.overleaf.com/learn/latex/theorems_and_proofs
+% for a nice explanation of how to define new theorems, but keep
+% in mind that the amsthm package is already included in this
+% template and that you must *not* alter the styling.
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+
+\title{RICERCAR}
+
+\author{
+    Marco Favorito\\
+     Department of Computer, Control and 
+     Management Engineering\\
+     University of Rome ``La Sapienza"\\
+     Via Ariosto, 25, 00185 Rome RM, Italy\\
+     \texttt{favorito@diag.uniroma1.it}\\
+     \texttt{https://marcofavorito.github.io}
+}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Quaerendo Invenietis ;-) 
+\end{abstract}
+
+\textquote{
+    \textit{
+    \"Uber dieser Fuge, wo der Name B A C H im Contrasubject 
+    angebracht worden, ist der Verfasser gestorben.
+    }
+}
+\cite{BachJohannSebastianDKdF}
+
+\textquote{While working on this fugure, in which the name \textit{BACH} appears
+in the countersubject, the author died.}
+
+\clearpage
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\end{document}
+

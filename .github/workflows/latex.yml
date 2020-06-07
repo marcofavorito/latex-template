@@ -1,0 +1,15 @@
+name: Latex build
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    container:
+      image: adnrv/texlive:latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Latex build
+      run: |
+        latexmk --halt-on-error -pdf
+
