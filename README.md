@@ -29,6 +29,17 @@ To run continuously:
 ./scripts/build.sh -pvc
 ```
 
+## Vagrant
+
+To use Vagrant, first... [install Vagrant](https://www.vagrantup.com/) :open_mouth:
+
+Then:
+```
+vagrant up
+vagrant ssh
+cd /vagrant
+```
+
 ## License
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
