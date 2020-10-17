@@ -11,6 +11,6 @@ all: ${PDF}
 
 clean:
 	latexmk -C
-	-rm -fr ${PDF} main.run.xml *.bbl *.nlo clean.aux clean.fdb_latexmk texput.fls
+	-rm -fr ${PDF} main.run.xml *.bbl *.blg *.nlo clean.aux clean.fdb_latexmk texput.fls
     
 
