@@ -12,8 +12,10 @@ all: ${PDF}
 clean:
 	latexmk -C
 	-rm -fr ${PDF} main.run.xml *.bbl *.blg *.nlo clean.aux clean.fdb_latexmk texput.fls
-	-rm -rf **/[._]*.s[a-v][a-z]
-	-rm -rf **/[._]*.sw[a-p]
-	-rm -rf **/[._]s[a-rt-v][a-z]
-	-rm -rf **/[._]ss[a-gi-z]
-	-rm -rf **/[._]sw[a-p]
+	-rm -fr **/*.aux
+	# Vim
+	-rm -rf  **/.*.s[a-v][a-z]   .*.s[a-v][a-z]
+	-rm -rf  **/.*.sw[a-p]       .*.sw[a-p]
+	-rm -rf  **/.s[a-rt-v][a-z]  .s[a-rt-v][a-z]
+	-rm -rf  **/.ss[a-gi-z]      .ss[a-gi-z]
+	-rm -rf  **/.sw[a-p]         .sw[a-p]
