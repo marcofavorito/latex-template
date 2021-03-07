@@ -12,21 +12,20 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{booktabs}
-\usepackage{algorithm}
-\usepackage{algorithmic}
 \usepackage{latexsym}
 \usepackage{amsthm}
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usepackage{todonotes}
+\usepackage{subcaption}
 \usepackage{xspace}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{nameref}
-\usepackage{subfig}
 \usepackage{tikz}
+\usepackage{relsize}
 \usetikzlibrary{automata, positioning, arrows}
 \tikzset{->,
     >=stealth,
@@ -36,6 +35,12 @@
 
 \usepackage[legalpaper, a4paper, total={6in, 8in}]{geometry}
 
+\usepackage[inline]{enumitem}
+\newlist{romanenumerate*}{enumerate*}{1}
+\setlist[romanenumerate*]{label=(\textit{\roman*})}
+\newlist{romanenumerate}{enumerate}{1}
+\setlist[romanenumerate]{label=(\textit{\roman*})}
+
 
 \addbibresource{bibliography.bib}
 % citation style
@@ -43,15 +48,26 @@
 \let\cite\citep
 \let\shortcite\citeyearpar
 
-% See https://www.overleaf.com/learn/latex/theorems_and_proofs
-% for a nice explanation of how to define new theorems, but keep
-% in mind that the amsthm package is already included in this
-% template and that you must *not* alter the styling.
-\newtheorem{example}{Example}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{definition}{Definition}
-\newtheorem{corollary}{Corollary}
+% Packages and setup for theorem environments
+\declaretheorem[name=Theorem]{theorem}
+\declaretheorem[name=Lemma,sibling=theorem]{lemma}
+\declaretheorem[name=Proposition,sibling=theorem]{proposition}
+\declaretheorem[name=Claim,sibling=theorem]{claim}
+\declaretheorem[name=Claim,numbered=no]{claim*}
+\declaretheorem[name=Corollary,sibling=theorem]{corollary}
+\declaretheorem[name=Definition,sibling=theorem]{definition}
+\declaretheorem[name=Example,sibling=theorem]{example}
+
+% algorithms
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm,algorithmicx}
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+\algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
+\algrenewcommand\algorithmicensure{\textbf{Postcondition:}}
+
+
+%\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
 
 \title{Regis Iussu Cantio Et Reliqua Canonica Arte Resoluta}
 
