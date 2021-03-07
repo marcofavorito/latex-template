@@ -6,6 +6,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[small]{caption}
+\usepackage[citestyle=authoryear,bibstyle=authortitle,natbib=true,backend=bibtex]{biblatex}
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -32,6 +33,14 @@
     node distance=3cm,
     every state/.style={thick, fill=gray!10}
 }
+
+
+
+\addbibresource{bibliography.bib}
+% citation style
+\renewcommand\nameyeardelim{, }
+\let\cite\citep
+\let\shortcite\citeyearpar
 
 % See https://www.overleaf.com/learn/latex/theorems_and_proofs
 % for a nice explanation of how to define new theorems, but keep
@@ -75,8 +84,7 @@ Quaerendo Invenietis ;-)
 \textquote{While working on this fugure, in which the name \textit{BACH} appears
 in the countersubject, the author died.}
 
-\bibliographystyle{unsrt}
-\bibliography{bibliography}
+\printbibliography
 
 \end{document}
 
