@@ -11,7 +11,7 @@ all: ${PDF}
 
 clean:
 	latexmk -C
-	-rm -fr ${PDF} main.run.xml *.bbl *.blg *.nlo clean.aux clean.fdb_latexmk texput.fls
+	-rm -fr ${PDF} main.run.xml *.bbl *.blg *.nlo *.aux *.fdb_latexmk *.log *.fls
 	-rm -fr **/*.aux
 	# Vim
 	-rm -rf  **/.*.s[a-v][a-z]   .*.s[a-v][a-z]
